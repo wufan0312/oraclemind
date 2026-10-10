@@ -1,0 +1,52 @@
+# 玄镜 OracleMind · 根目录
+# 说明：各子项目（oraclemind-frontend / oraclemind-backend / oraclemind-ai / oraclemind-admin）各有自己的 .gitignore
+
+# 服务日志（开发调试用）
+oj_*.log
+*.log
+
+# 本地数据库（开发产物）
+*.db
+*.sqlite
+*.sqlite3
+
+# 派生产物
+outputs/
+generated-images/
+
+# 临时校验脚本
+oj_*.py
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# WorkBuddy 本地态（含 mcp.json 密钥、项目记忆、浏览器 CDP profile，严禁入库）
+.workbuddy/
+
+# 密钥 / 凭据（兜底，防止任何位置的明文密钥被纳入）
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+service-account*.json
+credentials.json
+*.pfx
+*.p12
+
+# 依赖与构建产物（子项目各自 .gitignore 已覆盖，这里再兜底一层）
+node_modules/
+.venv/
+venv/
+.next/
+
+# 清理归档（mv 暂存，可恢复，不入库）
+.archive/
+
+# IDE
+.idea/
+
+# 环境变量（兜底；保留已提交的 .env.production / .env.development，仅排除含密钥/本机文件）
+.env
+.env.local
+.env.*.local
