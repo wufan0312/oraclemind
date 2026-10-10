@@ -50,3 +50,15 @@ venv/
 .env
 .env.local
 .env.*.local
+
+# 子项目（各有独立 git 仓库 / 独立管理，主仓不追踪其源码，避免嵌套仓库误提交）
+oraclemind-frontend/
+oraclemind-backend/
+oraclemind-ai/
+oraclemind-admin/
+oraclemind-miniprogram/
+
+# 工具 / 缓存产物
+.cache/
+.trae/
+.trae-html-share-packages/
